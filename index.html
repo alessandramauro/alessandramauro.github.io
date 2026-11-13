@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AM | Alessandra Mauro</title>
+
+  <!-- Bootstrap (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font: Cormorant (titoli) e Poppins (testi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Il nostro CSS, caricato per ultimo per poter sovrascrivere Bootstrap -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top menu">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">AM</a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipale" aria-controls="menuPrincipale"
+                  aria-expanded="false" aria-label="Apri il menù">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="menuPrincipale">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contattami.html">Contattami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="container hero-contenuto">
+      
+          <!-- Colonna sinistra: testi -->
+          <div class="hero-testo">
+            <p class="hero-saluto">Hi, I'm</p>
+            <h1 class="hero-nome">Alessandra Mauro</h1>
+            <p class="hero-ruolo">Junior UX/UI Designer based in Udine.</p>
+            <p class="hero-descrizione">
+              Timida, sognatrice e attenta ai dettagli, cerco di trasformare le idee
+              in un qualcosa di concreto al fine di raccontare l'anima delle persone
+              e l'essenza delle cose.
+            </p>
+            <a href="contattami.html" class="btn btn-rosa">Se vuoi, scrivimi!</a>
+          </div>
+      
+          <!-- Colonna destra: immagine -->
+          <div class="hero-immagine">
+            <div class="cerchi">
+          
+              <img src="img/foto.jpg" alt="Ritratto di Alessandra Rossi" class="cerchi-foto">
+          
+              <svg class="cerchi-linee" viewBox="0 0 100 100" aria-hidden="true">
+                <!-- anello pieno, vicino alla foto -->
+                <circle cx="50" cy="50" r="40" pathLength="100"/>
+                <!-- anelli aperti: 'dash gap' dice quanta parte è disegnata -->
+                <circle cx="50" cy="50" r="44" pathLength="100"
+                        stroke-dasharray="68 32" transform="rotate(-60 50 50)"/>
+                <circle cx="50" cy="50" r="47.5" pathLength="100"
+                        stroke-dasharray="40 60" transform="rotate(100 50 50)"/>
+              </svg>
+          
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
+  <!-- Bootstrap (JavaScript) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

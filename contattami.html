@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contattami | AM</title>
+
+  <!-- Bootstrap (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font: Cormorant (titoli) e Poppins (testi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Il nostro CSS, caricato per ultimo per poter sovrascrivere Bootstrap -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top menu">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">AM</a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#menuPrincipale" aria-controls="menuPrincipale"
+                  aria-expanded="false" aria-label="Apri il menù">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="menuPrincipale">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contattami.html">Contattami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container">
+      
+          <header class="portfolio-intestazione portfolio-intestazione--centrata">
+            <h1>Mettiamoci in contatto</h1>
+            <p class="testo-secondario">
+              Se hai bisogno di maggiori informazioni, hai un progetto in mente,
+              vuoi collaborare o anche semplicemente fare due chiacchiere,
+              scrivimi pure, ti risponderò non appena possibile.
+            </p>
+          </header>
+      
+          <form class="form-contatti" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="redirect" value="http://127.0.0.1:5500/grazie.html">
+
+            <input type="hidden" name="access_key" value="a5945c88-0961-45d4-836c-3956606cf507">
+            <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
+          
+            <div class="mb-4">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" name="name"
+                     placeholder="Il tuo nome" autocomplete="name" required>
+            </div>
+          
+            <div class="mb-4">
+              <label for="email" class="form-label">Indirizzo email</label>
+              <input type="email" class="form-control" id="email" name="email"
+                     placeholder="nome@esempio.it" autocomplete="email" required>
+            </div>
+          
+            <div class="mb-4">
+              <label for="oggetto" class="form-label">Oggetto</label>
+              <input type="text" class="form-control" id="oggetto" name="subject"
+                     placeholder="Oggetto" required>
+            </div>
+          
+            <div class="mb-4">
+              <label for="messaggio" class="form-label">Scrivi il tuo messaggio qui sotto</label>
+              <textarea class="form-control" id="messaggio" name="message" rows="6"
+                        placeholder="Digita qui" required></textarea>
+            </div>
+          
+            <button type="submit" class="btn btn-rosa">Invia messaggio</button>
+          </form>
+      
+        </div>
+      </main>
+
+  <!-- Bootstrap (JavaScript) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

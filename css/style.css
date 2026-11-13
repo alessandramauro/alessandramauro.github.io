@@ -1,0 +1,416 @@
+body {
+  background-color: #fbead6;
+  color: #3d3935;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant", Georgia, serif;
+  font-weight: 700;
+  color: #3d3935;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+
+a {
+  color: #9a5560;
+}
+a:hover {
+  color: #3d3935;
+}
+
+.testo-secondario {
+  color: #8c8279;
+}
+
+.sezione {
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .sezione {
+    padding: 5rem 0;
+  }
+}
+
+.sezione-rosa {
+  background-color: #f0c4cb;
+}
+
+.card-rosa {
+  background-color: #fbead6;
+  border: 1px solid #e5bca9;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.btn-rosa {
+  background-color: #c87d87;
+  color: #3d3935;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.75rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-rosa:hover {
+  background-color: #9a5560;
+  color: #fff;
+}
+
+.menu {
+  background-color: #fbead6;
+  border-bottom: 4px solid #e5bca9;
+}
+.menu .navbar-brand {
+  font-family: "Cormorant", Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c87d87;
+}
+.menu .navbar-brand:hover {
+  color: #c87d87;
+}
+.menu .nav-link {
+  color: #3d3935;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.menu .nav-link:hover, .menu .nav-link.active {
+  color: #9a5560;
+}
+.menu .navbar-toggler {
+  border-color: #e5bca9;
+}
+
+.hero {
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+  }
+}
+.hero .container {
+  width: 100%;
+}
+
+.hero-contenuto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .hero-contenuto {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.hero-testo {
+  flex: 1;
+}
+
+.hero-immagine {
+  flex: 1;
+  width: 100%;
+}
+
+.hero-saluto {
+  font-family: "Cormorant", Georgia, serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #8c8279;
+  margin-bottom: 0;
+}
+
+.hero-nome {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #c87d87;
+}
+@media (min-width: 768px) {
+  .hero-nome {
+    font-size: 4.8rem;
+  }
+}
+
+.hero-ruolo {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #3d3935;
+  margin: 1rem 0 1.25rem;
+}
+@media (min-width: 768px) {
+  .hero-ruolo {
+    font-size: 1.4rem;
+  }
+}
+
+.hero-descrizione {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+.segnaposto-immagine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4/5;
+  max-width: 380px;
+  margin: 0 auto;
+  background-color: #f0c4cb;
+  border: 2px dashed #c87d87;
+  border-radius: 12px;
+  color: #8c8279;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .about-intro {
+    flex-direction: row;
+    gap: 4rem;
+    padding: 5rem 0;
+  }
+}
+
+.about-immagine,
+.about-testo {
+  flex: 1;
+  width: 100%;
+}
+
+.about-titolo {
+  margin-bottom: 1.5rem;
+}
+
+.divisore {
+  border: 0;
+  border-top: 2px solid #e5bca9;
+  opacity: 1;
+  margin: 0;
+}
+
+.blocco-cv {
+  padding: 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .blocco-cv {
+    padding: 3.5rem 0;
+  }
+}
+.blocco-cv h2 {
+  margin-bottom: 1.25rem;
+}
+
+.cv-voce {
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.cv-periodo {
+  font-size: 0.85rem;
+  color: #8c8279;
+  margin-bottom: 1rem;
+}
+
+.cv-dettaglio {
+  margin-bottom: 0;
+}
+
+.cv-item {
+  margin-bottom: 2rem;
+}
+.cv-item:last-child {
+  margin-bottom: 0;
+}
+
+.skill-titolo {
+  font-size: 1.6rem;
+  color: #9a5560;
+}
+
+.lista-skill {
+  padding-left: 1.2rem;
+}
+.lista-skill li {
+  margin-bottom: 0.4rem;
+}
+.lista-skill li::marker {
+  color: #c87d87;
+}
+
+.portfolio-intestazione {
+  text-align: left;
+  padding: 3rem 0 2rem;
+}
+@media (min-width: 768px) {
+  .portfolio-intestazione {
+    padding: 4rem 0 3rem;
+  }
+}
+.portfolio-intestazione h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 768px) {
+  .portfolio-intestazione h1 {
+    font-size: 3.8rem;
+  }
+}
+.portfolio-intestazione p {
+  margin-bottom: 0;
+}
+
+.griglia-portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .griglia-portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .griglia-portfolio {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.card-progetto {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0c4cb;
+  border: 1px solid #e5bca9;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #3d3935;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-progetto:hover {
+  color: #3d3935;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(61, 57, 53, 0.15);
+}
+.card-progetto img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  background-color: #e5bca9;
+}
+
+.card-progetto-testo {
+  padding: 1.25rem;
+}
+.card-progetto-testo h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.card-progetto-testo p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.portfolio-intestazione--centrata {
+  text-align: center;
+}
+.portfolio-intestazione--centrata p {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.form-contatti {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+.form-contatti .form-label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.form-contatti .form-control {
+  background-color: #fff;
+  border: 1px solid #e5bca9;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  color: #3d3935;
+}
+.form-contatti .form-control::placeholder {
+  color: rgba(140, 130, 121, 0.65);
+  opacity: 1;
+}
+.form-contatti .form-control:focus {
+  border-color: #c87d87;
+  box-shadow: 0 0 0 0.2rem rgba(200, 125, 135, 0.25);
+}
+
+.cerchi {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.cerchi-foto {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center 70%;
+  border-radius: 50%;
+  border: 4px solid #c87d87;
+}
+
+.cerchi-linee {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #c87d87;
+  stroke-width: 0.6;
+  stroke-linecap: round;
+}
+
+.grazie {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

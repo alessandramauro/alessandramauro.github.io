@@ -1,0 +1,481 @@
+// ==========================
+// 1. VARIABILI
+// ==========================
+$sfondo:         #fbead6;
+$rosa-card:      #f0c4cb;
+$rosa-accento:   #c87d87;
+$rosa-scuro:     #9a5560;  // versione più scura dell'accento, per link e hover
+$pesca:          #e5bca9;  // colore extra
+$grigio-caldo:   #8c8279;
+$grigio-scuro:   #3d3935;
+
+$font-titoli: 'Cormorant', Georgia, serif;
+$font-testo:  'Poppins', Arial, sans-serif;
+
+$raggio: 12px;
+
+// ==========================
+// 2. MIXIN
+// ==========================
+// Applica gli stili solo da tablet in su (approccio mobile-first)
+@mixin da-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin da-desktop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+// ==========================
+// 3. STILI DI BASE
+// ==========================
+body {
+  background-color: $sfondo;
+  color: $grigio-scuro;
+  font-family: $font-testo;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: $font-titoli;
+  font-weight: 700;
+  color: $grigio-scuro;
+}
+
+h1 {
+  font-size: 2.6rem;
+
+  @include da-tablet {
+    font-size: 3.8rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+
+  @include da-tablet {
+    font-size: 2.6rem;
+  }
+}
+
+a {
+  color: $rosa-scuro;
+
+  &:hover {
+    color: $grigio-scuro;
+  }
+}
+
+.testo-secondario {
+  color: $grigio-caldo;
+}
+
+// ==========================
+// 4. COMPONENTI
+// ==========================
+.sezione {
+  padding: 3rem 0;
+
+  @include da-tablet {
+    padding: 5rem 0;
+  }
+}
+
+.sezione-rosa {
+  background-color: $rosa-card;
+}
+
+.card-rosa {
+  background-color: $sfondo;
+  border: 1px solid $pesca;
+  border-radius: $raggio;
+  padding: 1.5rem;
+}
+
+.btn-rosa {
+  background-color: $rosa-accento;
+  color: $grigio-scuro;
+  font-weight: 500;
+  border: none;
+  border-radius: $raggio;
+  padding: 0.75rem 1.75rem;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $rosa-scuro;
+    color: #fff;
+  }
+}
+// ==========================
+// 5. MENÙ
+// ==========================
+.menu {
+    background-color: $sfondo;
+    border-bottom: 4px solid $pesca;
+  
+    .navbar-brand {
+      font-family: $font-titoli;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $rosa-accento;
+    
+      &:hover {
+        color: $rosa-accento;
+      }
+    }
+  
+    .nav-link {
+      color: $grigio-scuro;
+      font-weight: 500;
+      transition: color 0.3s;
+  
+      &:hover,
+      &.active {
+        color: $rosa-scuro;
+      }
+    }
+  
+    .navbar-toggler {
+      border-color: $pesca;
+    }
+  }
+  // ==========================
+// 6. HOME (HERO)
+// ==========================
+.hero {
+    padding: 3rem 0;
+  
+    @include da-tablet {
+      display: flex;
+      align-items: center;
+      min-height: 80vh;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  }
+  
+  .hero-contenuto {
+    display: flex;
+    flex-direction: column;   // smartphone: una colonna sopra l'altra
+    align-items: center;
+    gap: 2.5rem;
+  
+    @include da-tablet {
+      flex-direction: row;    // tablet e desktop: affiancate
+      justify-content: space-between;
+      gap: 4rem;
+    }
+  }
+  
+  .hero-testo {
+    flex: 1;
+  }
+  
+  .hero-immagine {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .hero-saluto {
+    font-family: $font-titoli;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: $grigio-caldo;
+    margin-bottom: 0;
+  }
+  
+  .hero-nome {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: $rosa-accento;   // nuova riga
+  
+    @include da-tablet {
+      font-size: 4.8rem;
+    }
+  }
+  
+  .hero-ruolo {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: $grigio-scuro;
+    margin: 1rem 0 1.25rem;
+  
+    @include da-tablet {
+      font-size: 1.4rem;
+    }
+  }
+  
+  .hero-descrizione {
+    max-width: 34rem;
+    margin-bottom: 2rem;
+  }
+  
+  .segnaposto-immagine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 5;
+    max-width: 380px;
+    margin: 0 auto;
+    background-color: $rosa-card;
+    border: 2px dashed $rosa-accento;
+    border-radius: $raggio;
+    color: $grigio-caldo;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  // ==========================
+// 7. PAGINA ABOUT
+// ==========================
+.about-intro {
+    display: flex;
+    flex-direction: column;     // smartphone: immagine sopra, testo sotto
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+  
+    @include da-tablet {
+      flex-direction: row;      // tablet e desktop: immagine a sinistra, testo a destra
+      gap: 4rem;
+      padding: 5rem 0;
+    }
+  }
+  
+  .about-immagine,
+  .about-testo {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .about-titolo {
+    margin-bottom: 1.5rem;
+  }
+  
+  // Linea di separazione
+  .divisore {
+    border: 0;
+    border-top: 2px solid $pesca;
+    opacity: 1;                 // Bootstrap la rende semitrasparente: la annulliamo
+    margin: 0;
+  }
+  
+  // Blocchi del curriculum
+  .blocco-cv {
+    padding: 2.5rem 0;
+  
+    @include da-tablet {
+      padding: 3.5rem 0;
+    }
+  
+    h2 {
+      margin-bottom: 1.25rem;
+    }
+  }
+  
+  .cv-voce {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .cv-periodo {
+    font-size: 0.85rem;
+    color: $grigio-caldo;
+    margin-bottom: 1rem;        // più spazio prima di "Diploma" / "Gestione"
+  }
+  
+  .cv-dettaglio {
+    margin-bottom: 0;
+  }
+  .cv-item {
+    margin-bottom: 2rem;
+  
+    &:last-child {
+      margin-bottom: 0;   // l'ultima voce non ha bisogno di spazio sotto
+    }
+  }
+  
+  // Competenze
+  .skill-titolo {
+    font-size: 1.6rem;
+    color: $rosa-scuro;
+  }
+  
+  .lista-skill {
+    padding-left: 1.2rem;
+  
+    li {
+      margin-bottom: 0.4rem;
+  
+      &::marker {
+        color: $rosa-accento;   // pallino rosa
+      }
+    }
+  }
+  // ==========================
+// 8. PAGINA PORTFOLIO
+// ==========================
+.portfolio-intestazione {
+    text-align: left;        
+    padding: 3rem 0 2rem;
+  
+    @include da-tablet {
+      padding: 4rem 0 3rem;
+    }
+  
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.25rem;
+  
+      @include da-tablet {
+        font-size: 3.8rem;
+      }
+    }
+  
+    p {
+      margin-bottom: 0;
+    }
+  }
+  
+  // La griglia
+  .griglia-portfolio {
+    display: grid;
+    grid-template-columns: 1fr;          // smartphone: 1 colonna
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+  
+    @include da-tablet {
+      grid-template-columns: repeat(2, 1fr);   // tablet: 2 colonne
+    }
+  
+    @include da-desktop {
+      grid-template-columns: repeat(3, 1fr);   // desktop: 3 colonne
+      gap: 2rem;
+    }
+  }
+  
+  // La card
+  .card-progetto {
+    display: flex;
+    flex-direction: column;
+    background-color: $rosa-card;
+    border: 1px solid $pesca;
+    border-radius: $raggio;
+    overflow: hidden;                    // gli angoli arrotondati ritagliano anche l'immagine
+    color: $grigio-scuro;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      color: $grigio-scuro;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba($grigio-scuro, 0.15);
+    }
+  
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;                 // ritaglia senza deformare
+      object-position: center;              // mostra la parte alta della pagina
+      background-color: $pesca;
+    }
+  }
+  
+  .card-progetto-testo {
+    padding: 1.25rem;
+  
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  // ==========================
+// 9. PAGINA CONTATTAMI
+// ==========================
+.portfolio-intestazione--centrata {
+    text-align: center;
+  
+    p {
+      max-width: 38rem;
+      margin: 0 auto;      // centra il paragrafo, che ha una larghezza massima
+    }
+  }
+  
+  .form-contatti {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+  
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+  
+    .form-control {
+      background-color: #fff;
+      border: 1px solid $pesca;
+      border-radius: $raggio;
+      padding: 0.75rem 1rem;
+      color: $grigio-scuro;
+  
+      &::placeholder {
+        color: rgba($grigio-caldo, 0.65);   // grigio chiaro
+        opacity: 1;                          // Firefox lo rende più sbiadito di suo
+      }
+  
+      &:focus {
+        border-color: $rosa-accento;
+        box-shadow: 0 0 0 0.2rem rgba($rosa-accento, 0.25);
+      }
+    }
+  }
+
+  // ==========================
+// 10. FOTO CON CERCHI
+// ==========================
+.cerchi {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.cerchi-foto {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center 70%;   // mostra più la parte bassa: sposta il ritaglio
+  border-radius: 50%;
+  border: 4px solid $rosa-accento;
+}
+
+.cerchi-linee {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;                    // solo contorno, niente riempimento
+  stroke: $rosa-accento;
+  stroke-width: 0.6;
+  stroke-linecap: round;         // estremità arrotondate degli archi
+}
+
+.grazie {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
