@@ -261,7 +261,7 @@ a {
   .divisore {
     border: 0;
     border-top: 2px solid $pesca;
-    opacity: 1;                 // Bootstrap la rende semitrasparente: la annulliamo
+    opacity: 1;                 
     margin: 0;
   }
   
@@ -431,7 +431,7 @@ a {
   
       &::placeholder {
         color: rgba($grigio-caldo, 0.65);   // grigio chiaro
-        opacity: 1;                          // Firefox lo rende più sbiadito di suo
+        opacity: 1;                          // più sbiadito
       }
   
       &:focus {
